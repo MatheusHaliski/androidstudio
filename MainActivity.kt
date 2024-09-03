@@ -11,7 +11,6 @@ import com.example.myintentapplication.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    // Registrando um ActivityResultLauncher para receber o resultado da SecondActivity
     private val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
         if (result.resultCode == RESULT_OK) {
             val data = result.data
