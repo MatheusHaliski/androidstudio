@@ -13,15 +13,11 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second)
 
-        // Configurar o clique do botão para exibir um Toast com os dados do usuário
         binding.finishButton.setOnClickListener {
             val name = binding.nameEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
-
-            // Exibir um Toast com os dados do usuário
+            
             Toast.makeText(this, "Username: $name\nPassword: $password", Toast.LENGTH_LONG).show()
-
-            // Finalizar a atividade
             finish()
         }
     }
